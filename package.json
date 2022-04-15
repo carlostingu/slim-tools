@@ -1,0 +1,17 @@
+{
+  "name": "slim-tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Carlos Tingu",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "dotenv": "^16.0.0",
+    "sequelize": "^6.19.0",
+    "sqlite3": "^5.0.3"
+  }
+}
