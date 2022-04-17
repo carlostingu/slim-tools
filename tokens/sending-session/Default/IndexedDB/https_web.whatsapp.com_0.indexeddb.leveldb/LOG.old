@@ -1,0 +1,12 @@
+2022/04/17-03:32:05.336 35ec Reusing MANIFEST C:\Users\Carlos Tingu\Documents\node-projects\slim-tools\tokens\sending-session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/04/17-03:32:05.337 35ec Recovering log #15
+2022/04/17-03:32:05.385 35ec Reusing old log C:\Users\Carlos Tingu\Documents\node-projects\slim-tools\tokens\sending-session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000015.log 
+2022/04/17-03:32:34.588 1e00 Level-0 table #20: started
+2022/04/17-03:32:34.629 1e00 Level-0 table #20: 1268854 bytes OK
+2022/04/17-03:32:34.631 1e00 Delete type=0 #15
+2022/04/17-03:32:35.757 1e00 Compacting 1@1 + 1@2 files
+2022/04/17-03:32:35.838 1e00 Generated table #21@1: 50171 keys, 2041149 bytes
+2022/04/17-03:32:35.839 1e00 Compacted 1@1 + 1@2 files => 2041149 bytes
+2022/04/17-03:32:35.839 1e00 compacted to: files[ 0 0 1 0 0 0 0 ]
+2022/04/17-03:32:35.840 1e00 Delete type=2 #17
+2022/04/17-03:32:35.840 1e00 Delete type=2 #20

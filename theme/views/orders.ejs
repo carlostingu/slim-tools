@@ -1,0 +1,39 @@
+<%- include('_header', {
+    style: null
+}); %>
+
+<div class="container-fluid mt-4">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Produto</th>
+                <th scope="col">Cliente</th>
+                <th scope="col">Cobrar</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% if (orders)  { %>
+                <% orders.map((order, orderIndex) => { %>
+                    <tr>
+                        <th scope="row"><%= ++orderIndex; %></th>
+                        <th scope="row"><%= order.product_name.toUpperCase(); %></th>
+                        <th scope="row"><%= order.cus_name.toUpperCase(); %></th>
+                        <th scope="row">
+                            <button type="button" class="btn btn-outline-dark btn-send-billet"
+                                data-order="<%= JSON.stringify(order); %>"
+                            >
+                                <i class="bi bi-send"></i>
+                            </button>
+                        </th>
+                    </tr>
+                <% }); %>
+            <% } %>
+        </tbody>
+    </table>
+</div>
+
+<%- include('_footer', {
+    script: 'orders'
+}); %>

@@ -1,7 +1,6 @@
 import axios from 'axios';
-import fs from 'fs/promises';
 
-const bin = async (number, log = false, dir = null) => {
+const bin = async (number) => {
     try {
         const {
             data: result
@@ -9,10 +8,6 @@ const bin = async (number, log = false, dir = null) => {
             method: 'GET',
             url: `https://lookup.binlist.net/${ number }`
         });
-
-        if (log && dir) {
-            await fs.appendFile(`${ dir }/bin-${ (new Date()).getTime() }.json`, JSON.stringify(result));
-        }
 
         return result;
     } catch (error) {

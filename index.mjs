@@ -1,29 +1,31 @@
-/* Models */
-import User from './src/models/user.mjs';
+import express from 'express';
+import http from 'http';
+import {
+    Server
+} from 'socket.io';
 
-/* Tools */
-import bin from './src/tools/bin.mjs';
+import home from './src/routes/home.mjs';
 
-(async () => {
-    'use strict';
+const app = express();
+const server = http.createServer(app);
 
-    /* Create */
-    // const result = await User.create({
-    //     name: 'Carlos Tingu',
-    //     username: 'carlostingu',
-    //     password: '910418'
-    // });
+global.io = new Server(server);
+global.wpp = {};
 
-    /* Read */
-    // const users = await User.findAll();
-    // const user = await User.findByPk(1);
+/* Views */
+app.set('view engine', 'ejs');
+app.set('views', 'theme/views');
 
-    /* Update */
-    // const user = await User.findByPk(1);
-    // user.password = '910418';
-    // const result = await user.save();
+/* Assets */
+app.use('/assets', express.static('theme/assets'));
 
-    /* Delete */
-    // const user = await User.findByPk(1);
-    // const result = await user.destroy();
-})();
+/* Form */
+app.use(express.json());
+
+app.use('/', home);
+
+server.listen(3000, run);
+
+function run() {
+    console.log('App Started In: http://localhost:3000');
+}

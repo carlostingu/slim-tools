@@ -1,0 +1,19 @@
+<%- include('_header', {
+    style: null
+}); %>
+
+<div class="container-fluid">
+    <div id="sessionBlock" class="d-flex justify-content-center flex-wrap mt-4"></div>
+
+    <div id="qrCodeBlock" class="d-flex justify-content-center flex-wrap flex-column align-items-center mt-4">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        
+        <sub class="text-muted mt-4">Buscando atualizações...</sub>
+    </div>
+</div>
+
+<%- include('_footer', {
+    script: 'home'
+}); %>
